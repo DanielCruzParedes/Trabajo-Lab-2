@@ -176,13 +176,21 @@ public class AgregarPlan extends javax.swing.JFrame {
         String nombre = txtnombre.getText();
         String tipoTelefono = String.valueOf(cbTipoTelefono.getSelectedItem());
         String tipoCelular;
+        String pin= txtPinOEmail.getText();
+        String email = txtPinOEmail.getText();
+        
+        //0 es samsung, 1 es iphone
         if(Integer.valueOf(tipoTelefono)==0){
             tipoCelular="Samsung";
             lblPedirExtra.setText("Ingrese su pin: ");
             
+            tigo.AgregarPlan(numeroDeTelefono, nombre, pin, tipoCelular);
+            
         }else{
             tipoCelular="Iphone";
             lblPedirExtra.setText("Ingrese su email: ");
+            
+            tigo.AgregarPlan(numeroDeTelefono, nombre, email, tipoCelular);
         }
         
         JOptionPane.showMessageDialog(null, "Plan agregado correctamente.");

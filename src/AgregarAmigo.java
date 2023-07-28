@@ -135,7 +135,9 @@ public class AgregarAmigo extends javax.swing.JFrame {
 
     private void btnagregaramigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregaramigoActionPerformed
         int numeroDeTelefono = Integer.valueOf(txtnumerotelefono.getText());
-        int pin = Integer.valueOf(txtpin.getText());
+        String pin = txtpin.getText();
+        
+        tigo.agregaramigo(numeroDeTelefono, pin);
         
         
         JOptionPane.showMessageDialog(null, "Amigo agregado correctamente.");

@@ -1,4 +1,3 @@
-
 public abstract class Plan {
   
     private String numerodetelefono;

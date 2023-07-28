@@ -19,11 +19,15 @@ public class Tigo {
                 if(planes.get(count).toString().isEmpty()){
                         Plan iphone= new PlanIphone(String.valueOf(numeroTel), nombre, extra);
                         planes.add(count,iphone);
-                } 
+                } else {
+                    AgregarPlan(count+1,numeroTel,nombre,extra,tipo);
+                }
             }else if (tipo.equals("Samsung")){
                 if(planes.get(count).toString().isEmpty()){
                     Plan samsung = new PlanSamsung(String.valueOf(numeroTel),nombre,extra);
                     planes.add(count,samsung);
+                } else {
+                    AgregarPlan(count+1,numeroTel,nombre,extra,tipo);
                 }
             } 
         }
@@ -62,9 +66,15 @@ public class Tigo {
         System.out.println("En el arreglo se encuentran los siguientes tipos: \nPlanes de iphone: "+ciphone +"\nPlanes de samsung: "+csamsung);
     }
     
-    
-    
-    
-    
-    
+    public void agregaramigo(int numeroTel, String pin){
+        for(Plan pl : planes){
+            if(pl instanceof PlanSamsung){
+                if(pl.getNumerodetelefono().equals(numeroTel)){
+                   PlanSamsung planSamsung = (PlanSamsung) pl;
+                   planSamsung.agregarPinAmigo(pin);
+                }
+            }
+        }
+    }
+   
 }

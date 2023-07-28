@@ -149,6 +149,7 @@ public class Visual extends javax.swing.JFrame {
     private void btnagregarplanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarplanActionPerformed
         AgregarPlan agregarplan = new AgregarPlan(tigo);
         agregarplan.setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_btnagregarplanActionPerformed
     
