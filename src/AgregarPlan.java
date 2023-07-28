@@ -180,7 +180,7 @@ public class AgregarPlan extends javax.swing.JFrame {
         String email = txtPinOEmail.getText();
         
         //0 es samsung, 1 es iphone
-        if(Integer.valueOf(tipoTelefono)==0){
+        if(Integer.parseInt(tipoTelefono)==0){
             tipoCelular="Samsung";
             lblPedirExtra.setText("Ingrese su pin: ");
             
